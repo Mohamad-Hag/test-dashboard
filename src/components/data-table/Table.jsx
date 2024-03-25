@@ -7,7 +7,6 @@ import Loader from "../ui/Loader";
 export default function Table() {
   const { table } = useContext(DataTableContext);
 
-  console.log(table[0]);
   if (table[0] === 0)
     return (
       <div className="flex items-center justify-center h-52">
