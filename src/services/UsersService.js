@@ -5,7 +5,7 @@ async function getUsers(pageSize = numberOfEntriesOptions[0], currentPage = 1) {
   let response = await api.get(`users`);
   let numberOfPages = Math.ceil(response.data.total / pageSize);
 
-  let isCurrentPageExceeded = currentPage >= numberOfPages;
+  let isCurrentPageExceeded = currentPage > numberOfPages;
 
   response = await api.get(
     `users?limit=${pageSize}&skip=${
@@ -40,7 +40,7 @@ async function getUsersBy(
   let response = await api.get(`users/filter?key=${key}&value=${value}`);
   let numberOfPages = Math.ceil(response.data.total / pageSize);
 
-  let isCurrentPageExceeded = currentPage >= numberOfPages;
+  let isCurrentPageExceeded = currentPage > numberOfPages;
 
   response = await api.get(
     `users/filter?limit=${pageSize}&skip=${

@@ -8,7 +8,7 @@ async function getProducts(
   let response = await api.get(`products`);
   let numberOfPages = Math.ceil(response.data.total / pageSize);
 
-  let isCurrentPageExceeded = currentPage >= numberOfPages;
+  let isCurrentPageExceeded = currentPage > numberOfPages;
 
   response = await api.get(
     `products?limit=${pageSize}&skip=${
@@ -42,7 +42,7 @@ async function getProductsBy(
   let response = await api.get(`products/filter?key=${key}&value=${value}`);
   let numberOfPages = Math.ceil(response.data.total / pageSize);
 
-  let isCurrentPageExceeded = currentPage >= numberOfPages;
+  let isCurrentPageExceeded = currentPage > numberOfPages;
 
   response = await api.get(
     `products/filter?limit=${pageSize}&skip=${
