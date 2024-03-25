@@ -1,0 +1,11 @@
+select {
+  padding: 5px !important;
+  min-width: 40px !important;
+  border-radius: 0.2em !important;
+  cursor: pointer;
+}
+
+td,
+table th {
+  white-space: nowrap;
+}

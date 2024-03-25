@@ -1,0 +1,58 @@
+@import url("../styles/neutra-font.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+:root {
+  /* Colors for Definition Only */
+  --def-lgt-val: 83%; /* Default Lightness Value for Accent Color */
+  --trn-lgt-val: 95%; /* Default Lightness Value for Transparent Accent Color */
+  --ac-hs-val: 183, 42%; /* Constant Values for Hue and Saturation Values for Accent Color (To change the color, change those values) */
+  --def-ac-val: var(--ac-hs-val), var(--def-lgt-val); /* HSL Values for Accent Color */
+  --trn-ac-val: var(--ac-hs-val), var(--trn-lgt-val); /* HSL Values for Transparent Accent Color */
+
+  /* Colors for Global Use */
+  --ac: hsl(var(--def-ac-val)); /* HSL Accent Color */
+  --ac-trn: hsl(var(--trn-ac-val)); /* HSL Transparent Accent Color */
+  --ac-sec: #fdc936;
+  --prm: white;
+  --sec: #ebebeb;
+  --ter: #cccccc;
+  --prm-txt: #322625;
+  --sec-txt: #ffffff;
+  --ter-txt: #666666;
+}
+
+#root, html {
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: var(--prm-txt);
+  font-size: 18px;
+  font-family: Neutra;      
+}
+
+a {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
