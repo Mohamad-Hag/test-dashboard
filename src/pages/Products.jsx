@@ -5,7 +5,8 @@ import useDataTableValue from "../components/hooks/useDataTableValue";
 import PageContainer from "../components/layout/PageContainer";
 import BreadCrumb from "../components/ui/BreadCrumb";
 import DataTableContext from "../contexts/DataTableContext";
-import { getProducts } from "../services/ProductsService";
+import productFilterItems from "../data/productFilterItem";
+import { getProducts, getProductsBy } from "../services/ProductsService";
 
 export default function Products() {
   const dataTable = useDataTableValue();
@@ -16,17 +17,16 @@ export default function Products() {
       <PageContainer>
         <BreadCrumb page="Products" />
         <DataTable onPageChange={pageChanged}>
-          <FilterItem text="Title" type="text" key_="title" />
-          <FilterItem text="Brand" type="text" key_="brand"/>
-          <FilterItem
-            text="Category"
-            key_="category"
-            type="select"
-            values={[
-              { text: "All", value: "All" },
-              { text: "Laptops", value: "Laptops" },
-            ]}
-          />
+          {productFilterItems.map((item) => (
+            <FilterItem
+              filter={getProductsBy}
+              clearFilter={getProducts}
+              key={item.key_}
+              key_={item.key_}
+              type={item.type}
+              values={item.values}
+            />
+          ))}
         </DataTable>
       </PageContainer>
     </DataTableContext.Provider>

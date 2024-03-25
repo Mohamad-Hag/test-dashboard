@@ -6,7 +6,7 @@ export default function TableRows() {
   const data = isFilterMode ? filteredTable.data : table.data;
 
   return (
-    <>
+    <tbody>
       {data &&
         data.map((row, index) => (
           <tr key={index} className="hover:bg-ac-trn h-8">
@@ -17,6 +17,6 @@ export default function TableRows() {
             ))}
           </tr>
         ))}
-    </>
+    </tbody>
   );
 }

@@ -5,6 +5,7 @@ import useDataTableValue from "../components/hooks/useDataTableValue";
 import PageContainer from "../components/layout/PageContainer";
 import BreadCrumb from "../components/ui/BreadCrumb";
 import DataTableContext from "../contexts/DataTableContext";
+import userFilterItems from "../data/userFilterItems";
 import { getUsers, getUsersBy } from "../services/UsersService";
 
 export default function Users() {
@@ -16,41 +17,15 @@ export default function Users() {
       <PageContainer>
         <BreadCrumb page="Users" />
         <DataTable onPageChange={pageChanged}>
-          <FilterItem
-            type="text"
-            filter={getUsersBy}
-            clearFilter={getUsers}
-            key_="firstName"
-          />
-          <FilterItem
-            type="text"
-            filter={getUsersBy}
-            clearFilter={getUsers}
-            key_="lastName"
-          />
-          <FilterItem
-            type="text"
-            filter={getUsersBy}
-            clearFilter={getUsers}
-            key_="email"
-          />
-          <FilterItem
-            type="date"
-            filter={getUsersBy}
-            clearFilter={getUsers}
-            key_="birthDate"
-          />
-          <FilterItem
-            key_="gender"
-            filter={getUsersBy}
-            clearFilter={getUsers}
-            text="Gender"
-            type="select"
-            values={[
-              { text: "Male", value: "male" },
-              { text: "Female", value: "female" },
-            ]}
-          />
+          {userFilterItems.map((item) => (
+            <FilterItem
+              type={item.type}
+              key={item.key_}
+              filter={getUsersBy}
+              clearFilter={getUsers}
+              key_={item.key_}
+            />
+          ))}
         </DataTable>
       </PageContainer>
     </DataTableContext.Provider>

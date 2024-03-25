@@ -6,13 +6,15 @@ export default function TableHeaders() {
   const headers = table.headers;
 
   return (
-    <tr className="table-row border-2 h-12 bg-ac">
-      {headers &&
-        headers.map((header) => (
-          <th key={header} className="border-2 px-5">
-            {header}
-          </th>
-        ))}
-    </tr>
+    <thead>
+      <tr className="table-row border-2 h-12 bg-ac">
+        {headers &&
+          headers.map((header) => (
+            <th key={header} className="border-2 px-5">
+              {header}
+            </th>
+          ))}
+      </tr>
+    </thead>
   );
 }
