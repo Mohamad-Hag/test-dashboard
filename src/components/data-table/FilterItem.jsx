@@ -99,9 +99,10 @@ const FilterItem = (props) => {
                 setValue(inputRef.current.value);
               }}
             >
-              {values.map((value) => (
-                <option key={value.value}>{value.text}</option>
-              ))}
+              {values &&
+                values.map((value) => (
+                  <option key={value.value}>{value.text}</option>
+                ))}
             </select>
           )}
           <div className="flex justify-end gap-1">
