@@ -7,10 +7,10 @@ export default function TableHeaders() {
 
   return (
     <thead>
-      <tr className="table-row border-2 h-12 bg-ac">
+      <tr className="table-row border-2 border-ac-trn h-12 bg-ac">
         {headers &&
           headers.map((header) => (
-            <th key={header} className="border-2 px-5">
+            <th key={header} className="border-2 border-ac-trn px-5">
               {header}
             </th>
           ))}

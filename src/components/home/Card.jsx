@@ -3,7 +3,7 @@ export default function Card({ title, value, icon, featured }) {
     <div
       className={`${
         featured ? "bg-ac-sec" : "bg-ac"
-      } shadow-md rounded-lg p-4 flex-auto flex items-center justify-center ${
+      } shadow-lg rounded-lg p-4 flex-auto h-40 flex items-center justify-center border-[0.5px] border-ter-txt ${
         featured && "scale-125"
       }`}
     >

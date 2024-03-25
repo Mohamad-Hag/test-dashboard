@@ -80,7 +80,7 @@ const FilterItem = (props) => {
       {isOpen && (
         <form
           onSubmit={submitted}
-          className="shadow-md absolute p-5 min-w-64 top-[30px] rounded-md bg-white border-2 flex flex-col gap-3"
+          className="shadow-md absolute p-5 min-w-64 top-[30px] rounded-md bg-prm border-2 border-ter-txt flex flex-col gap-3"
         >
           {type !== "select" ? (
             <input

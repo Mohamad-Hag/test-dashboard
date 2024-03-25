@@ -6,6 +6,7 @@ import Layout from "./components/layout/Layout";
 import Header from "./components/header/Header";
 import Sidebar from "./components/ui/Sidebar";
 import { BrowserRouter } from "react-router-dom";
+import ThemeContext from "./contexts/ThemeContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

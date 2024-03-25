@@ -49,10 +49,15 @@ body {
   color: var(--prm-txt);
   font-size: 18px;
   font-family: Neutra;      
+  background-color: var(--prm);
 }
 
 a {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+}
+
+input {
+  background-color: var(--prm);
 }

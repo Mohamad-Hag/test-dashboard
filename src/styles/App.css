@@ -3,6 +3,7 @@ select {
   min-width: 40px !important;
   border-radius: 0.2em !important;
   cursor: pointer;
+  background-color: var(--prm);
 }
 
 td,
