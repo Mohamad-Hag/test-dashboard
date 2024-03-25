@@ -80,7 +80,7 @@ const FilterItem = (props) => {
       {isOpen && (
         <form
           onSubmit={submitted}
-          className="shadow-md absolute p-5 min-w-64 top-[30px] rounded-md bg-prm border-2 border-ter-txt flex flex-col gap-3"
+          className="shadow-md absolute p-5 min-w-64 top-[30px] rounded-md bg-prm border-2 border-acc-tran flex flex-col gap-3"
         >
           {type !== "select" ? (
             <input
@@ -108,13 +108,13 @@ const FilterItem = (props) => {
             <input
               type="button"
               value="Clear Filter"
-              className="text-sm rounded-sm cursor-pointer px-4 py-2 bg-ac"
+              className="text-sm rounded-sm cursor-pointer px-4 py-2 bg-ac text-prm-txt"
               onClick={clear}
             />
             <input
               type="submit"
               value="Apply"
-              className="text-sm rounded-sm cursor-pointer px-4 py-2 bg-ac-sec"
+              className="text-sm rounded-sm cursor-pointer px-4 py-2 bg-ac-sec text-prm-txt"
             />
           </div>
         </form>
