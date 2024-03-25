@@ -24,6 +24,7 @@ export default function Users() {
               filter={getUsersBy}
               clearFilter={getUsers}
               key_={item.key_}
+              values={item.values}
             />
           ))}
         </DataTable>
