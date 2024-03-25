@@ -12,6 +12,7 @@ const useTheme = () => {
     for (let item of themeMap)
       documentElement.style.setProperty(item.property, item[theme_]);
 
+    
     localStorage.setItem("theme", theme_);
     setTheme_(theme_);
   };

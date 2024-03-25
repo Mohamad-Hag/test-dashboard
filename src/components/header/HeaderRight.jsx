@@ -8,6 +8,7 @@ export default function HeaderRight() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
+    console.log(theme);
     setTheme(theme === "dark" ? "light" : "dark");
   };
 

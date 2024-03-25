@@ -8,7 +8,7 @@ export default function Layout(props) {
   useEffect(() => {
     let theme_ = localStorage.getItem("theme");
 
-    if (theme_ === "undefined" || theme) localStorage.setItem("theme", theme);
+    if (theme_ === "undefined" || !theme_) localStorage.setItem("theme", theme);
     else setTheme(theme_);
   }, []);
 
